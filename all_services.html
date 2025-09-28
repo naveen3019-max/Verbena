@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Services | FuturaTech</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* Custom Animation */
+    @keyframes fadeInUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .fade-in {
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+   /* Container styling */
+ul.styled-bullets {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Each bullet */
+ul.styled-bullets li {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  font-size: 15px;  /* reduced font size */
+  color: #e0e6f5;   /* light text for contrast */
+  line-height: 1.5;
+  font-weight: 400;
+  text-shadow: 0px 1px 3px rgba(0,0,0,0.7); /* glow for readability */
+}
+
+/* Custom bullet circle */
+ul.styled-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00c6ff, #0072ff); /* bright gradient */
+  box-shadow: 0 0 6px rgba(0,114,255,0.6);
+}
+
+  </style>
+</head>
+<body class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white font-sans">
+
+  <!-- Header -->
+  <header class="text-center py-5">
+    <h1 class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+      🌍 Our Services Across Industries
+    </h1>
+    <p class="mt-3 text-lg text-gray-300">Explore how we are transforming different industries with AI, AR, and VR</p>
+  </header>
+
+  <!-- Services -->
+  <div class="container my-5">
+    <!-- Healthcare -->
+    <div class="row align-items-center mb-5 fade-in">
+      <div class="col-md-4">
+        <img src="assets/heathcare.png" class="rounded-xl shadow-lg w-100" alt="Healthcare">
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-3xl font-bold text-cyan-400"><i class="fas fa-heartbeat"></i> Healthcare</h2>
+        <ul class="styled-bullets">
+          <li>Accurate Diagnosis: AI analyzes medical data and images with speed and precision, detecting diseases such as cancer, heart conditions, and diabetic retinopathy at earlier stages, which leads to better treatment outcomes</li>
+          <li>Predictive Analytics: AI predicts health risks by evaluating patient history and current health data, enabling early interventions and preventative care strategies.</li>
+          <li>Improved Patient Care: By automating repetitive tasks and providing real-time clinical recommendations, AI frees healthcare professionals to focus on patient interactions, ultimately improving care quality and patient satisfaction.</li>
+          <li>Streamlined Administration: Tasks such as data entry, scheduling, and insurance processing are efficiently managed by AI systems, reducing staff workload and operational costs.</li>
+          <li>Remote Monitoring and Assistance: Wearable technologies and digital platforms powered by AI facilitate remote health monitoring and digital consultations, expanding access especially in rural and underserved areas.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Insurance -->
+    <div class="row align-items-center flex-row-reverse mb-5 fade-in">
+      <div class="col-md-4">
+        <img src="assets/insurance.png" class="rounded-xl shadow-lg w-100" alt="Insurance">
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-3xl font-bold text-purple-400"><i class="fas fa-shield-alt"></i> Insurance</h2>
+        <ul class="styled-bullets">
+          <li>Voice bots can automate claims intake, initiate requests after incident reporting, and authenticate identity by analyzing speech patterns</li>
+          <li>AI can detect fraudulent intent by interpreting anomalies in tone or language, flagging risky claims for further review.</li>
+          <li>Policy updates, payment handling, and customer queries on voice calls are handled efficiently, cutting wait times and boosting satisfaction</li>
+          <li>AI-powered claims systems analyze structured and unstructured claims data, estimate damages, and instantly detect fraud.</li>
+          <li>Policy validation (checking coverage, automatic payouts, and settlement proposals) is streamlined by AI decision engines.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="row align-items-center mb-5 fade-in">
+      <div class="col-md-4">
+        <img src="assets/education.png" class="rounded-xl shadow-lg w-100" alt="Education">
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-3xl font-bold text-purple-400"><i class="fas fa-graduation-cap"></i> Education</h2>
+        <ul class="styled-bullets">
+          <li>Personalized learning: AI tailors content to each student’s pace, strengths, and weaknesses, providing customized lesson plans and real-time feedback to improve understanding.</li>
+          <li>Automation: AI automates administrative tasks such as grading and scheduling, freeing educators to focus on teaching and student support</li>
+          <li>Intelligent tutoring: AI-driven systems mimic one-on-one instruction, offering targeted guidance, identifying knowledge gaps, and adapting the difficulty of tasks.</li>
+          <li>Interactive learning: AR enables students to explore 3D models, virtual dissections, and overlay digital content onto real-world objects, making abstract concepts concrete and engaging</li>
+          <li>Real-world context: AR brings geography, history, and science topics to life by augmenting physical environments, helping students grasp difficult subjects more intuitively.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="row align-items-center flex-row-reverse mb-5 fade-in">
+      <div class="col-md-4">
+        <img src="assets/forset.png" class="rounded-xl shadow-lg w-100" alt="Forsetry">
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-3xl font-bold text-purple-400"><i class="fas fa-tree fa-2x mb-3" style="color:#22c55e;"></i> Forestry</h2>
+        <ul class="styled-bullets">
+          <li>AI analyzes satellite, drone, and sensor data to spot deforestation, illegal activity, and habitat changes faster and more accurately than manual inspection</li>
+          <li>Machine learning models automate tree species identification, health diagnostics, biomass measurement, and forest inventory, streamlining work that used to require labor-intensive field surveys</li>
+          <li>AI-powered solutions enable rapid assessment of tree heights, crown sizes, and disease outbreaks for proactive forest management and sustainability</li>
+          <li>AR tools let stakeholders visualize forest structures, biodiversity, and LiDAR-based tree models in real-world environments, bridging physical and digital data for planning and education</li>
+          <li>VR is used for training workers on machinery operation and safety, offering realistic, risk-free practice environments that save time and reduce hazards</li>
+        </ul>
+      </div>
+    </div>
+
+ <div class="row align-items-center mb-5 fade-in">
+      <div class="col-md-4">
+        <img src="assets/manufact.png" class="rounded-xl shadow-lg w-100" alt="Manufacturing">
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-3xl font-bold text-green-400"><i class="fas fa-cogs"></i> Manufacturing</h2>
+        <ul class="styled-bullets">
+          <li>Predictive maintenance: AI analyzes sensor and equipment data to predict failures before they happen, reducing costly downtime and extending machine life.</li>
+          <li>Quality control: AI-powered vision systems detect defects quickly and accurately, cutting down on waste and maintaining product standards</li>
+          <li>Assembly and maintenance: AR overlays digital instructions onto real-world objects, helping workers assemble parts, troubleshoot, and maintain equipment with step-by-step guidance</li>
+          <li>Immersive training: VR simulates machinery operation, safety protocols, and assembly processes, letting workers practice in lifelike, risk-free environments</li>
+          <li>Design and prototyping: VR enables virtual product and facility walkthroughs, revealing design flaws and supporting faster iterations before production</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+      <div class="row align-items-center flex-row-reverse mb-5 fade-in">
+      <div class="col-md-4">
+        <img src="assets/retial.png" class="rounded-xl shadow-lg w-100" alt="E-Commerce">
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-3xl font-bold text-purple-400"><i class="fas fa-shopping-cart"></i> E-Commerce</h2>
+        <ul class="styled-bullets">
+          <li>Personalized product recommendations, dynamic pricing, and targeted marketing improve conversion rates and enhance customer satisfaction</li>
+          <li>AI-driven data analytics yield insights for demand forecasting, inventory management, and optimizing promotions, unlocking smarter business decisions and operational savings</li>
+          <li>AR lets customers preview products in their real environment (virtual try-ons for fashion, placing furniture at home), raising buyer confidence and reducing returns</li>
+          <li>VR enables virtual store visits, giving shoppers the ability to browse, select, and interact with products as if in a physical showroom.</li>
+          <li>Rich behavioral data gathered via AR/VR helps brands optimize offers and storefronts for continued competitive advantage</li>
+        </ul>
+      </div>
+    </div>
+
+<div class="row align-items-center mb-5 fade-in">
+      <div class="col-md-4">
+        <img src="assets/Automotive.png" class="rounded-xl shadow-lg w-100" alt="Automotive">
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-3xl font-bold text-green-400"><i class="fas fa-car"></i> Automotive</h2>
+        <ul class="styled-bullets">
+          <li>AI, AR, and VR are significantly enhancing the automotive industry by improving design, manufacturing, safety, training, and customer experiences, while also reducing costs and accelerating innovation.</li>
+          <li>Enhances safety with advanced driver assistance systems (ADAS) like collision avoidance, lane-keeping, and driver fatigue monitoring, reducing accidents and improving reliability.</li>
+          <li>Revolutionizes vehicle design and prototyping by enabling real-time virtual modeling, quick adjustments, and reducing physical prototypes, saving time and materials.</li>
+          <li>Enables immersive vehicle design and virtual prototyping, reducing development costs and accelerating design cycles</li>
+          <li>Enhanced customer experience with interactive virtual showrooms, personalized features, and AR-based exploration.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<div class="row align-items-center flex-row-reverse mb-5 fade-in">
+      <div class="col-md-4">
+        <img src="assets/finanace.png" class="rounded-xl shadow-lg w-100" alt="finanace">
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-3xl font-bold text-purple-400"><i class="fas fa-chart-line"></i> Finance</h2>
+        <ul class="styled-bullets">
+          <li>AI, AR, and VR are transforming finance through automation, enhanced data visualization, immersive customer experiences, improved risk management, and personalized financial services.</li>
+          <li>Automation of manual processes such as transaction processing, compliance, and customer support leads to improved operational efficiency and reduced costs</li>
+          <li>AR enables interactive payment solutions, virtual property exploration, and easy access to banking services like branch and ATM locations through mobile apps.</li>
+          <li>VR offers immersive training for financial professionals, improving skills in customer service, risk management, and product knowledge without physical constraints.</li>
+          <li>•	Enhanced operational efficiency, reducing manual labor and human error, with faster, more reliable processes</li>
+        </ul>
+      </div>
+    </div>
+  <!-- Footer -->
+ <footer class="text-center py-6 bg-gray-800 text-gray-400">
+  <!-- Social Icons -->
+  <div class="mb-3 flex justify-center gap-6 text-2xl">
+    <a href="#" class="transition transform hover:scale-110 hover:text-blue-500">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" class="transition transform hover:scale-110 hover:text-sky-400">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#" class="transition transform hover:scale-110 hover:text-blue-600">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="#" class="transition transform hover:scale-110 hover:text-pink-500">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" class="transition transform hover:scale-110 hover:text-red-500">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
+
+  <!-- Copyright -->
+  <p class="mb-1 text-sm">
+    © <span id="year"></span> Verbena Tech | All Rights Reserved
+  </p>
+
+  <!-- Credit -->
+  <p class="text-xs text-gray-500">
+    Designed & Developed by <strong>PRNA Technologies</strong> | by <strong>Naveen Kumar</strong>
+  </p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Fade-in animation on scroll
+    const elements = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.style.opacity = 1;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
