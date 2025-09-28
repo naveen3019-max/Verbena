@@ -1118,24 +1118,29 @@ document.getElementById("contactForm").addEventListener("submit", async function
     project: document.getElementById("project").value
   };
 
-  const response = await fetch("https://formspree.io/f/mnngjwql", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json"
-    },
-    body: JSON.stringify(data)
-  });
+  try {
+    const response = await fetch("https://formspree.io/f/mnngjwql", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
 
-  if (response.ok) {
-    alert("Form submitted successfully!");
-    this.reset();
-  } else {
-    const err = await response.json();
-    alert("Error: " + JSON.stringify(err));
+    if (response.ok) {
+      alert("Form submitted successfully!");
+      this.reset();
+    } else {
+      const err = await response.json();
+      console.error("Formspree error:", err);
+      alert("Error: " + JSON.stringify(err));
+    }
+  } catch (error) {
+    console.error("Network error:", error);
+    alert("Error submitting form.");
   }
 });
-
 
   </script>
 
