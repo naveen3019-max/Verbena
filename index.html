@@ -748,23 +748,23 @@ footer {
           </div>
         </div>
         <div class="col-lg-6" data-aos="fade-left">
-          <form  class="card-glass p-4">
+          <form id="contactForm" class="card-glass p-4">
             <div class="row g-3">
               <div class="col-md-6">
                 <label class="form-label">Name</label>
-                <input type="text" class="form-control" placeholder="Your name" />
+                <input type="text" id="name" name="name" class="form-control" placeholder="Your name" />
               </div>
               <div class="col-md-6">
                 <label class="form-label">Email</label>
-                <input type="email" class="form-control" placeholder="you@example.com" />
+                <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" />
               </div>
               <div class="col-12">
                 <label class="form-label">Company</label>
-                <input type="text" class="form-control" placeholder="Company name" />
+                <input type="text" id="company" name="company" class="form-control" placeholder="Company name" />
               </div>
               <div class="col-12">
                 <label class="form-label">Project Details</label>
-                <textarea rows="4" class="form-control" placeholder="Tell us about your goals…"></textarea>
+                <textarea id="project" name="project" rows="4" class="form-control" placeholder="Tell us about your goals…"></textarea>
               </div>
               <div class="col-12 d-grid">
                 <button type="submit" class="btn btn-brand btn-lg">Request a Consultation</button>
@@ -1133,6 +1133,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
     alert("Error submitting form.");
   }
 });
+
   </script>
 
   <!-- IMAGE GUIDANCE (remove in production)
