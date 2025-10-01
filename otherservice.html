@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Futuristic Services</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+
+
+  <style>
+    body {
+      background: #0a0a0a;
+      font-family: 'Poppins', sans-serif;
+      color: #e5e7eb;
+    }
+
+  .hero {
+  height: 100vh;
+  background: radial-gradient(circle at top, #1e1b4b, #0a0a0a);
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+/* Hero Section Heading */
+/* Hero Section Heading */
+.hero-section h1 {
+  font-size: 3rem;                 
+  font-weight: 700;                
+  font-family: 'Poppins', sans-serif; 
+  color: #ffffff;
+  text-shadow: 0 0 2px rgba(0, 200, 255, 0.3); /* very subtle glow */
+  letter-spacing: 0.5px;
+}
+
+/* Hero Section Subheading */
+.hero-section p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  color: #dcdcdc;
+  text-shadow: none; /* no glow at all for body text */
+}
+
+/* Animated background grid lines */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+              linear-gradient(180deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 1;
+  animation: moveGrid 20s linear infinite;
+}
+
+@keyframes moveGrid {
+  from { transform: translateY(0); }
+  to { transform: translateY(40px); }
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;  /* cleaner corporate font */
+  color: #ffffff;
+  text-shadow: 0 0 3px rgba(0, 200, 255, 0.4); /* very subtle glow */
+  letter-spacing: 0.5px;
+}
+
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-top: 15px;
+  color: #d1d5db;
+}
+
+.btn-glow {
+  background: linear-gradient(90deg, #00ffe5, #9333ea);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #0a0a0a;
+  box-shadow: 0 0 15px rgba(0,255,229,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+.btn-glow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(147,51,234,0.8);
+}
+
+
+    /* Futuristic Cards */
+    .service-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px;
+      padding: 25px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(0,255,255,0.6);
+    }
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+      color: #00ffe5;
+    }
+    .service-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .service-card ul li {
+      margin: 6px 0;
+      position: relative;
+      padding-left: 25px;
+      color: #d1d5db;
+    }
+    .service-card ul li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: #00ffe5;
+      text-shadow: 0 0 6px #00ffe5;
+    }
+/* Facility Management Service Background */
+.fms-section {
+  background: radial-gradient(circle at top left, rgba(0, 255, 229, 0.1), transparent 60%),
+              radial-gradient(circle at bottom right, rgba(147, 51, 234, 0.15), transparent 60%),
+              #0d0d0d;
+  border-top: 1px solid rgba(0,255,229,0.2);
+  border-bottom: 1px solid rgba(147,51,234,0.2);
+  box-shadow: inset 0 0 30px rgba(0,255,229,0.05), inset 0 0 60px rgba(147,51,234,0.05);
+}
+.fms-img {
+  border: 3px solid #ff7f11;   /* bright orange border */
+  border-radius: 12px;          /* smooth corners */
+  box-shadow: 0 0 20px rgba(255, 127, 17, 0.6); /* glowing effect */
+  padding: 5px;                 /* little space inside border */
+  background: rgba(0,0,0,0.4);  /* optional dark backdrop */
+}
+/* OPSWAT Circle Style */
+.opswat-circle {
+  border: 3px solid #00aaff;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(0, 170, 255, 0.15), transparent 70%);
+  box-shadow: 0 0 30px rgba(0,170,255,0.4);
+  display: inline-block;
+  min-width: 300px;
+  min-height: 300px;
+}
+.section-heading {
+  font-size: 2.8rem;        /* Bigger size */
+  font-weight: 800;         /* Extra bold */
+  color: #00c8ff;           /* Futuristic cyan-blue */
+  text-shadow: 0 0 15px rgba(0,200,255,0.8), 0 0 30px rgba(0,200,255,0.5);
+  letter-spacing: 1px;
+}
+
+    .section-heading {
+  font-size: 2.6rem;            /* Big, but balanced */
+  font-weight: 700;             /* Bold but not too heavy */
+  font-family: 'Montserrat', sans-serif;  /* Clean modern font */
+  color: #00c8ff;               /* Professional cyan-blue */
+  text-shadow: 0 0 6px rgba(0,200,255,0.5); /* subtle glow */
+  letter-spacing: 0.5px;
+}
+/* Data Security Section */
+.data-security-list {
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.8;
+}
+
+.data-security-list li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.data-security-list .arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  margin-right: 12px;
+}
+
+.data-security-list .arrow.pink { border-left: 14px solid #e91e63; }
+.data-security-list .arrow.orange { border-left: 14px solid #ff5722; }
+.data-security-list .arrow.green { border-left: 14px solid #4caf50; }
+.data-security-list .arrow.red { border-left: 14px solid #f44336; }
+.footer {
+  background: #111111;
+  color: #ccc;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #00ffe5;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00ffe5;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 1.2rem;
+  color: #ccc;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00ffe5;
+  transform: translateY(-3px);
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+ <!-- Hero Section -->
+<section class="hero d-flex align-items-center justify-content-center text-center">
+  <div class="container" data-aos="zoom-in">
+    <h1 class="hero-title">Our Other AI & Tech Services</h1>
+    <p class="hero-subtitle">Empowering industries with AI, AR/VR, Cloud & Cybersecurity & More</p>
+    <a href="#services" class="btn btn-glow mt-3">Explore Services</a>
+  </div>
+</section>
+
+
+  <!-- Services Grid -->
+  <section class="container py-5">
+    <div class="row g-4">
+
+      <!-- Example Card -->
+<div class="col-md-6" data-aos="fade-up">
+  <div class="service-card">
+    <h3><i class="fas fa-video"></i> AI Video Surveillance</h3>
+    <p>Real-time monitoring, threat detection & SOP compliance powered by AI-driven video analytics.</p>
+    <ul>
+      <li><i class="fas fa-shield-alt"></i> Safety & Security Monitoring</li>
+      <li><i class="fas fa-user-secret"></i> Theft Prevention</li>
+      <li><i class="fas fa-tasks"></i> Automated QC</li>
+      <li><i class="fas fa-balance-scale"></i> Compliance Enforcement</li>
+    </ul>
+  </div>
+</div>
+
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+  <div class="service-card">
+    <h3><i class="fas fa-vr-cardboard"></i> AR / VR Experiences</h3>
+    <p>Immersive training, 3D simulations & avatars with next-gen AR/VR support for industries.</p>
+    <ul>
+      <li><i class="fas fa-cube"></i> Digital Twin Modeling</li>
+      <li><i class="fas fa-project-diagram"></i> Asset Simulation</li>
+      <li><i class="fas fa-user"></i> Virtual Avatars</li>
+      <li><i class="fas fa-headset"></i> Remote Assistance</li>
+    </ul>
+  </div>
+</div>
+
+
+
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+  <div class="service-card">
+    <h3><i class="fas fa-cogs"></i> ERP Transformation</h3>
+    <p>Enterprise-ready ERP modernization with SAP, Oracle & AI-integrated automation.</p>
+    <ul>
+      <li><i class="fas fa-calculator"></i> Tally & B-One</li>
+      <li><i class="fas fa-database"></i> JD Edward / HANA S4</li>
+      <li><i class="fas fa-server"></i> Oracle ERP</li>
+      <li><i class="fas fa-sync-alt"></i> Process Automation</li>
+    </ul>
+  </div>
+</div>
+
+
+    <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+  <div class="service-card">
+    <h3><i class="fas fa-cloud"></i> Cloud & AI Platforms</h3>
+    <p>Scalable AI/ML cloud solutions with GPU-powered data processing for enterprises.</p>
+    <ul>
+      <li><i class="fas fa-server"></i> Data Center Migration</li>
+      <li><i class="fas fa-microchip"></i> GPU Cloud Platforms</li>
+      <li><i class="fas fa-robot"></i> AI / ML Workloads</li>
+      <li><i class="fas fa-shield-alt"></i> Cloud Security</li>
+    </ul>
+  </div>
+</div>
+
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+  <div class="service-card">
+    <h3><i class="fas fa-fan"></i> DC Cooling System</h3>
+    <p>Advanced DC cooling solutions designed for maximum energy efficiency and real-time online monitoring.</p>
+    <ul>
+      <li><i class="fas fa-bolt"></i> Energy Savings</li>
+      <li><i class="fas fa-microchip"></i> Smart System Efficiency</li>
+      <li><i class="fas fa-desktop"></i> Online Monitoring</li>
+      <li><i class="fas fa-leaf"></i> Eco-Friendly Technology</li>
+    </ul>
+  </div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+  <div class="service-card">
+    <h3><i class="fas fa-network-wired"></i> Network Optimization</h3>
+    <p>Optimize bandwidth, manage quotas, and gain intelligent insights for efficient LAN/WAN management.</p>
+    <ul>
+      <li><i class="fas fa-sliders-h"></i> B/W Optimization</li>
+      <li><i class="fas fa-route"></i> Traffic Intelligence</li>
+      <li><i class="fas fa-tachometer-alt"></i> Quota Management</li>
+      <li><i class="fas fa-project-diagram"></i> LAN / WAN Management</li>
+    </ul>
+  </div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+  <div class="service-card">
+    <h3><i class="fas fa-user-shield"></i> Breach Attack Simulation</h3>
+    <p>Simulate cyber-attacks to identify vulnerabilities and strengthen organizational defense strategies.</p>
+    <ul>
+      <li><i class="fas fa-bug"></i> Breach Testing</li>
+      <li><i class="fas fa-exclamation-triangle"></i> Risk Analysis</li>
+      <li><i class="fas fa-shield-alt"></i> Defense Strategy</li>
+      <li><i class="fas fa-eye"></i> Continuous Monitoring</li>
+    </ul>
+  </div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="700">
+  <div class="service-card">
+    <h3><i class="fas fa-shield-alt"></i> Security Operation Center</h3>
+    <p>Centralized SOC services for real-time threat monitoring, analysis, and rapid incident response.</p>
+    <ul>
+      <li><i class="fas fa-eye"></i> Threat Monitoring</li>
+      <li><i class="fas fa-exclamation-circle"></i> Incident Response</li>
+      <li><i class="fas fa-file-alt"></i> Log Analysis</li>
+      <li><i class="fas fa-clock"></i> 24/7 Defense</li>
+    </ul>
+  </div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="800">
+  <div class="service-card">
+    <h3><i class="fas fa-network-wired"></i> Network Operation Center</h3>
+    <p>Efficient NOC management ensuring uptime, performance, and fault resolution for critical networks.</p>
+    <ul>
+      <li><i class="fas fa-tachometer-alt"></i> Performance Monitoring</li>
+      <li><i class="fas fa-tools"></i> Fault Management</li>
+      <li><i class="fas fa-signal"></i> Network Availability</li>
+      <li><i class="fas fa-bell"></i> Proactive Alerts</li>
+    </ul>
+  </div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="900">
+  <div class="service-card">
+    <h3><i class="fas fa-city"></i> Connected Infra – 360°</h3>
+    <p>Comprehensive connected infrastructure solutions enabling end-to-end visibility, automation, and resilience.</p>
+    <ul>
+      <li><i class="fas fa-plug"></i> Smart Integration</li>
+      <li><i class="fas fa-eye"></i> End-to-End Visibility</li>
+      <li><i class="fas fa-cogs"></i> Automation</li>
+      <li><i class="fas fa-shield-alt"></i> Resilience</li>
+    </ul>
+  </div>
+</div>
+
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="1000">
+  <div class="service-card">
+    <h3><i class="fas fa-microchip"></i> Industry 4.0 – IoT / IoE</h3>
+    <p>Next-generation Industry 4.0 solutions leveraging IoT/IoE for smart operations, real-time analytics, and connectivity.</p>
+    <ul>
+      <li><i class="fas fa-sitemap"></i> IoT Devices</li>
+      <li><i class="fas fa-chart-line"></i> Real-Time Data</li>
+      <li><i class="fas fa-robot"></i> Intelligent Operations</li>
+      <li><i class="fas fa-globe"></i> Global Connectivity</li>
+    </ul>
+  </div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="1100">
+  <div class="service-card">
+    <h3><i class="fas fa-lock"></i> IT/OT – Cybersecurity</h3>
+    <p>Integrated IT/OT cybersecurity solutions ensuring secure operations, threat detection, and compliance across digital and industrial systems.</p>
+    <ul>
+      <li><i class="fas fa-shield-alt"></i> Endpoint Protection</li>
+      <li><i class="fas fa-bug"></i> Threat Intelligence</li>
+      <li><i class="fas fa-network-wired"></i> Network Safeguards</li>
+      <li><i class="fas fa-clipboard-check"></i> Compliance Control</li>
+    </ul>
+  </div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="1200">
+  <div class="service-card">
+    <h3><i class="fas fa-database"></i> Data Mining & Analytics</h3>
+    <p>Unlock actionable insights with advanced data mining, predictive analytics, and machine learning for smarter business strategies.</p>
+    <ul>
+      <li><i class="fas fa-search"></i> Data Mining</li>
+      <li><i class="fas fa-chart-line"></i> Predictive Analytics</li>
+      <li><i class="fas fa-robot"></i> Machine Learning</li>
+      <li><i class="fas fa-lightbulb"></i> Business Intelligence</li>
+    </ul>
+  </div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="1300">
+  <div class="service-card">
+    <h3><i class="fas fa-project-diagram"></i> Microsegmentation & Lateral Threat Movement</h3>
+    <p>Advanced microsegmentation strategies to isolate workloads, contain threats, and prevent lateral movement across critical systems.</p>
+    <ul>
+      <li><i class="fas fa-border-all"></i> Network Segmentation</li>
+      <li><i class="fas fa-shield-alt"></i> Threat Containment</li>
+      <li><i class="fas fa-exchange-alt"></i> Lateral Movement Control</li>
+      <li><i class="fas fa-user-lock"></i> Zero Trust Security</li>
+    </ul>
+  </div>
+</div>
+
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="1400">
+  <div class="service-card">
+    <h3><i class="fas fa-balance-scale"></i> Domestic & International Compliance</h3>
+    <p>Comprehensive compliance solutions ensuring adherence to domestic regulations and international standards with risk management and audit readiness.</p>
+    <ul>
+      <li><i class="fas fa-gavel"></i> Regulatory Standards</li>
+      <li><i class="fas fa-globe"></i> Global Compliance</li>
+      <li><i class="fas fa-exclamation-triangle"></i> Risk Management</li>
+      <li><i class="fas fa-file-contract"></i> Audit & Reporting</li>
+    </ul>
+  </div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+  <div class="service-card">
+    <h3><i class="fas fa-code"></i> Development & Customization</h3>
+    <p>Tailored software solutions, integrations, and feature enhancements to fit your business needs.</p>
+    <ul>
+      <li><i class="fas fa-laptop-code"></i> Web & App Development</li>
+      <li><i class="fas fa-puzzle-piece"></i> Custom Integrations</li>
+      <li><i class="fas fa-tools"></i> Feature Enhancements</li>
+      <li><i class="fas fa-drafting-compass"></i> UI/UX Customization</li>
+    </ul>
+  </div>
+</div>
+<!-- Data Security Solutions Section -->
+<section id="data-security" class="py-5 fms-section">
+  <div class="container" data-aos="fade-up">
+    <div class="row align-items-center">
+
+      <!-- Left Side Image -->
+      <div class="col-md-5 text-center mb-4 mb-md-0">
+        <img src="assets/Data security.png" alt="Data Security Solutions"
+             class="img-fluid fms-img" 
+             style="max-height:350px; object-fit:contain;">
+      </div>
+
+      <!-- Right Side Content -->
+      <div class="col-md-7">
+        <h2 class="section-heading mb-4">Data Security Solutions</h2>
+        <ul class="list-unstyled data-security-list">
+          <li><span class="arrow pink"></span> Data Encryption & Secure Storage</li>
+          <li><span class="arrow orange"></span> Data Loss Prevention (DLP)</li>
+          <li><span class="arrow green"></span> Secure File Transfer & Access Control</li>
+          <li><span class="arrow red"></span> Threat Detection & Incident Response</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Facility Management Service Section -->
+<!-- Facility Management Service Section -->
+<section id="fms" class="py-5 fms-section" style="background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
+  <div class="container" data-aos="fade-up">
+    <div class="row align-items-center">
+      
+      <!-- Left Side Image -->
+      <div class="col-md-4 text-center mb-4 mb-md-0">
+        <img src="assets/FMS.png" alt="Facility Management Service" class="img-fluid fms-img" style="max-width:100%; height:auto; min-height:300px; max-height:500px; object-fit:contain;;">
+      </div>
+
+      <!-- Right Side Content -->
+      <div class="col-md-8">
+        <h2 class="section-heading mb-4">Facility Management Service (FMS)</h2>
+        <p class="text-gray-300">
+          Our Facility Management Services (FMS) ensure seamless IT operations, 
+          minimizing downtime and improving efficiency across all levels of your organization. 
+          We provide highly skilled engineers and specialists to maintain, monitor, and enhance IT infrastructure.
+        </p>
+        
+        <ul class="list-unstyled mt-4">
+          <li class="mb-3">
+            <span class="me-2 text-pink-500">➤</span> 
+            <strong>Backup Engineer</strong> – Ensures timely data backup & recovery, prevents data loss, and maintains disaster recovery plans.
+          </li>
+          <li class="mb-3">
+            <span class="me-2 text-orange-400">➤</span> 
+            <strong>System Engineer / Administrator</strong> – Manages servers, operating systems, databases, and user accounts while ensuring security & performance.
+          </li>
+          <li class="mb-3">
+            <span class="me-2 text-green-400">➤</span> 
+            <strong>Desktop Engineer</strong> – Provides end-user support, troubleshooting hardware/software issues, and maintaining workstations.
+          </li>
+          <li class="mb-3">
+            <span class="me-2 text-green-500">➤</span> 
+            <strong>Network Engineer</strong> – Designs, configures, and monitors LAN/WAN networks, ensuring connectivity, bandwidth optimization, and security.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPSWAT MetaDefender Section -->
+<!-- Detection and Prevention Section -->
+<section id="detection" class="py-5 fms-section">
+  <div class="container" data-aos="fade-up">
+    <div class="row align-items-center">
+
+      <!-- Left Side Image -->
+      <div class="col-md-5 text-center mb-4 mb-md-0">
+        <img src="assets/opswat.png" alt="OPSWAT MetaDefender" 
+             class="img-fluid fms-img" 
+             style="max-height:350px; object-fit:contain;">
+      </div>
+
+      <!-- Right Side Content -->
+      <div class="col-md-7">
+        <h2 class="section-heading mb-4">Detection and Prevention</h2>
+        <p class="text-gray-300">
+          OPSWAT MetaDefender delivers multi-layered cybersecurity to stop both 
+          known and unknown malware before it enters your IT or OT environment.
+        </p>
+
+        <ul class="list-unstyled mt-3 text-gray-300">
+          <li class="mb-2"><i class="fas fa-shield-alt text-blue-400 me-2"></i> Proactive Data Loss Prevention (DLP)</li>
+          <li class="mb-2"><i class="fas fa-file-alt text-cyan-400 me-2"></i> Deep Content Disarm & Reconstruction (CDR)</li>
+          <li class="mb-2"><i class="fas fa-brain text-purple-400 me-2"></i> Threat Intelligence with billions of hashes, IPs & domains</li>
+          <li class="mb-2"><i class="fas fa-bug text-red-400 me-2"></i> File-based Vulnerability Assessment</li>
+          <li class="mb-2"><i class="fas fa-layer-group text-green-400 me-2"></i> Multiscanning with 30+ anti-malware engines</li>
+          <li class="mb-2"><i class="fas fa-cubes text-orange-400 me-2"></i> Sandbox for fast dynamic analysis</li>
+        </ul>
+
+        <h5 class="text-cyan-400 mt-4"><i class="fas fa-server me-2"></i> Deployment Options</h5>
+        <p class="text-gray-300">On-Premises • Air-Gap • Cloud</p>
+      </div>
+    </div>
+
+    <!-- Product Icons Row -->
+    <div class="row text-center mt-5">
+      <div class="col"><i class="fas fa-plug fa-2x text-blue-400"></i><p class="mt-2">API</p></div>
+      <div class="col"><i class="fas fa-random fa-2x text-cyan-400"></i><p class="mt-2">ICAP</p></div>
+      <div class="col"><i class="fas fa-desktop fa-2x text-purple-400"></i><p class="mt-2">Kiosk</p></div>
+      <div class="col"><i class="fas fa-database fa-2x text-green-400"></i><p class="mt-2">Vault</p></div>
+      <div class="col"><i class="fas fa-hdd fa-2x text-orange-400"></i><p class="mt-2">Drive</p></div>
+      <div class="col"><i class="fas fa-user fa-2x text-blue-400"></i><p class="mt-2">Client</p></div>
+      <div class="col"><i class="fas fa-envelope fa-2x text-cyan-400"></i><p class="mt-2">Email</p></div>
+      <div class="col"><i class="fas fa-cloud fa-2x text-purple-400"></i><p class="mt-2">Cloud</p></div>
+      <div class="col"><i class="fas fa-server fa-2x text-green-400"></i><p class="mt-2">Storage</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="py-5 text-center fms-section">
+  <div class="container" data-aos="zoom-in">
+    <h2 class="section-heading mb-3">Ready to Transform Your Business?</h2>
+    <p class="text-gray-300 mb-4">
+      Discover how our AI, AR/VR, and Cybersecurity solutions can drive innovation and security for your organization.
+    </p>
+    <a href="index.html#contact" class="btn btn-glow">Get in Touch</a>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer py-5">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Company Info -->
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-title">Verbena Tech Solutions</h5>
+        <p class="text-gray-400">
+          AI • AR • VR • Cloud • Cybersecurity & More
+          Innovating for a smarter and safer future.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-title">Quick Links</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html#services">Our Services</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="index.html#careers">Careers</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-title">Follow Us</h5>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4 text-gray-400">
+      <p>© 2025 Verbena Tech Solutions | All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+</body>
+</html>
