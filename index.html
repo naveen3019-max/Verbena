@@ -343,12 +343,11 @@ border-radius: 14px;}
 }
 
 /* Default (desktop/laptops) */
-#industriesCarousel .carousel-control-prev {
-  left: -40px;   /* slightly outside but still clickable */
+@media (max-width: 992px) {
+  #industriesCarousel .carousel-control-prev { left: 10px; }
+  #industriesCarousel .carousel-control-next { right: 10px; }
 }
-#industriesCarousel .carousel-control-next {
-  right: -40px;
-}
+
 
 /* For tablets & below */
 @media (max-width: 992px) {
@@ -696,6 +695,8 @@ footer {
     justify-content: flex-start; /* align left on desktop */
   }
 }
+/* Force carousel control buttons visible */
+/* Force carousel prev/next buttons visible */
 
 
   </style>
