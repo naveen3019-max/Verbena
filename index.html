@@ -78,6 +78,38 @@
       animation: drift 12s ease-in-out infinite alternate;
     }
     @keyframes drift{to{transform: translate(-60px, -30px) scale(1.05)}}
+    @media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;       /* smaller heading */
+    line-height: 1.3;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 90%;
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* stack buttons */
+    align-items: center;
+    gap: 15px;
+  }
+
+  .hero-buttons a {
+    width: 90%;            /* full-width buttons on mobile */
+    text-align: center;
+  }
+}
+html, body {
+  overflow-x: hidden;   /* prevent horizontal scroll */
+}
+
+.orb,
+.animated-bg {
+  max-width: 100vw;     /* don’t extend past viewport */
+  overflow: hidden;
+}
 
     /* Sections */
     section{padding:80px 0}
@@ -601,6 +633,70 @@ footer {
 .carousel-control-next svg {
   filter: drop-shadow(0 0 8px rgba(168,85,247,0.8));
 }
+/* Responsive Hero Fix */
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  #hero .hero-wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #hero .hero-sub {
+    max-width: 90%;
+  }
+
+  #hero .d-flex.flex-wrap {
+    justify-content: center;
+  }
+
+  #hero img {
+    max-width: 80%;
+    margin: 20px auto 0 auto;
+    display: block;
+  }
+}
+/* HERO section fixes */
+#hero .hero-wrap {
+  text-align: center; /* default for mobile */
+}
+
+#hero .hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+#hero .hero-sub {
+  max-width: 720px;
+  margin: 0 auto 30px auto; /* center on mobile */
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#hero .d-flex.flex-wrap {
+  gap: 15px;
+  justify-content: center; /* center buttons on mobile */
+}
+
+#hero .d-flex.flex-wrap a {
+  min-width: 200px; /* ensures buttons same width */
+  text-align: center;
+}
+
+/* Desktop overrides */
+@media (min-width: 992px) {
+  #hero .hero-wrap {
+    text-align: left;
+  }
+  #hero .hero-sub {
+    margin: 0 0 30px 0; /* align left */
+  }
+  #hero .d-flex.flex-wrap {
+    justify-content: flex-start; /* align left on desktop */
+  }
+}
+
 
   </style>
 </head>
