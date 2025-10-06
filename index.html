@@ -630,7 +630,7 @@ pricing-badge {
   text-justify: inter-word;
   hyphens: none;
   line-height: 1.7;
-  word-spacing: 0.01em;
+  word-spacing: 0.02em;
 }
 .hero-sub {
   -webkit-font-smoothing: antialiased;
@@ -661,19 +661,22 @@ pricing-badge {
 /* HERO section fixes */
 #hero .hero-wrap {
   text-align: justify; /* default for mobile */
+  margin: 0 auto;
+  max-width: 1200px;            /* keeps content neatly centered */
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #hero .hero-title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  line-height: 1.2;
-  margin-bottom: 20px;
+  text-align: left;      
 }
 
 #hero .hero-sub {
-  max-width: 720px;
-  margin: 0 auto 30px auto; /* center on mobile */
-  font-size: 1.1rem;
-  line-height: 1.6;
+  text-align: justify;          /* keeps clean block look */
+  text-justify: inter-word;
+  margin: 0 0 30px 0;
+  word-spacing: 0.03em;
+  line-height: 1.7;
 }
 
 #hero .d-flex.flex-wrap {
@@ -699,6 +702,61 @@ pricing-badge {
     justify-content: flex-start; /* align left on desktop */
   }
 }
+@media (max-width: 768px) {
+  #hero .hero-wrap {
+    text-align: left;           /* stay clean on mobile */
+    padding: 0 15px;
+  }
+  #hero .hero-sub {
+    text-align: justify;
+    max-width: 95%;
+    margin: 0 auto;
+  }
+}
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: none;
+}
+/* CONTACT SECTION FIX */
+
+
+#contact h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#contact p {
+  color: var(--muted);
+  max-width: 600px;
+  text-align: justify;          /* 🔹 Justifies the paragraph */
+  text-justify: inter-word;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+#contact a,
+#contact span {
+  display: block;
+  color: var(--ink);
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+#contact a:hover {
+  color: var(--brand);
+}
+
+#contact .contact-info {
+  margin-top: 20px;
+}
+
+
+
   </style>
 </head>
 <body>
@@ -734,13 +792,13 @@ pricing-badge {
 
       <!-- Buttons -->
       <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-        <a href="#services" class="btn btn-brand btn-lg px-4">
+        <a href="#services" class="btn btn-brand btn-lg px-4 text-justify">
           <i class="fas fa-rocket me-2"></i> Explore Services
         </a>
-        <a href="#contact" class="btn btn-ghost btn-lg px-4">
+        <a href="#contact" class="btn btn-ghost btn-lg px-4 text-justify">
           <i class="fas fa-envelope me-2"></i> Contact Us
         </a>
-        <a href="#industries" class="btn btn-outline-info btn-lg px-4">
+        <a href="#industries" class="btn btn-outline-info btn-lg px-4 text-justify">
           <i class="fas fa-play-circle me-2"></i> Watch Demo
         </a>
       </div>
@@ -769,8 +827,8 @@ pricing-badge {
       <div class="row align-items-center g-4">
         <div class="col-lg-6" data-aos="fade-right">
           <h2 class="fw-bold mb-3">Who We Are</h2>
-          <p class="text-white-50 mb-3">We are a team of industry veteran engineers and designers building practical, high-impact integrating AI, AR, and VR solution and products. Our mission is to make immersive technology useful—creating better world to our customer and partner eco system.</p>
-          <ul class="text-white-50">
+          <p class="text-white-50 text-justify mb-3">We are a team of industry veteran engineers and designers building practical, high-impact integrating AI, AR, and VR solution and products. Our mission is to make immersive technology useful creating better world to our customer and partner eco system.</p>
+          <ul class="text-white-50 text-justify">
             <li><strong>AI</strong> for Humanoid, RPA, chatbots, analytics, and automation</li>
             <li><strong>AR</strong> for client calling, live support, and demo experiences.</li>
             <li><strong>VR</strong> for interactive equipment manuals and step-by-step guidance.</li>
@@ -1213,7 +1271,7 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
   };
 
   try {
-    const response = await fetch("https://formspree.io/f/xanpboyn", {
+    const response = await fetch("https://formspree.io/f/mnngjwql", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
