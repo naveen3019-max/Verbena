@@ -755,6 +755,29 @@ pricing-badge {
   margin-top: 20px;
 }
 
+/* Make country code selector compact and seamless */
+.country-select {
+  max-width: 80px;              /* reduced width */
+  background-color: var(--bs-body-bg); /* same as input background */
+  color: var(--bs-body-color);  /* same text color as input */
+  border: 1px solid #ced4da;    /* same border as Bootstrap input */
+  border-right: none;           /* merges smoothly with input */
+  border-radius: 0.375rem 0 0 0.375rem; /* left-rounded only */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Keep same style when not focused */
+.country-select:focus {
+  background-color: #fff;       /* changes only when clicked */
+  color: #000;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Adjust mobile input so they connect seamlessly */
+.input-group .form-control {
+  border-radius: 0 0.375rem 0.375rem 0;
+}
 
 
   </style>
@@ -980,21 +1003,91 @@ pricing-badge {
             <div><i class="lucide-map-pin me-2 text-justify"></i> India, Worldwide</div>
           </div>
         </div>
-        <div class="col-lg-6" data-aos="fade-left">
+       <div class="col-lg-6" data-aos="fade-left">
   <form id="contactForm" class="card-glass p-4">
     <div class="row g-3">
 
       <!-- Name -->
       <div class="col-md-6">
         <label class="form-label">Name</label>
-        <input type="text" id="name" name="name" class="form-control" placeholder="Your name" required />
+        <input type="text" id="name" name="name" class="form-control" placeholder="Your name" required >
       </div>
 
-      <!-- Mobile Number -->
-      <div class="col-md-6">
-        <label class="form-label">Mobile Number</label>
-        <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="+91 xxxxxxxxxxx" required />
-      </div>
+      <!-- Mobile Number with Country Code -->
+  <div class="col-md-6">
+  <label class="form-label">Mobile Number</label>
+  <div class= "form-label input-group">
+    <select class="form-control country-select" id="countryCode" name="countryCode">
+      <option value="+91" selected>+91 🇮🇳</option>
+      <option value="+1">+1 🇺🇸</option>
+      <option value="+44">+44 🇬🇧</option>
+      <option value="+61">+61 🇦🇺</option>
+      <option value="+971">+971 🇦🇪</option>
+      <option value="+81">+81 🇯🇵</option>
+      <option value="+49">+49 🇩🇪</option>
+      <option value="+33">+33 🇫🇷</option>
+      <option value="+55">+55 🇧🇷</option>
+      <option value="+94">+94 🇱🇰</option>
+      <option value="+92">+92 🇵🇰</option>
+      <option value="+880">+880 🇧🇩</option>
+      <option value="+977">🇳🇵 +977 (Nepal)</option>
+      <option value="+60">🇲🇾 +60 (Malaysia)</option>
+      <option value="+65">🇸🇬 +65 (Singapore)</option>
+      <option value="+62">🇮🇩 +62 (Indonesia)</option>
+      <option value="+63">🇵🇭 +63 (Philippines)</option>
+      <option value="+64">🇳🇿 +64 (New Zealand)</option>
+      <option value="+34">🇪🇸 +34 (Spain)</option>
+      <option value="+55">🇧🇷 +55 (Brazil)</option>
+      <option value="+52">🇲🇽 +52 (Mexico)</option>
+      <option value="+27">🇿🇦 +27 (South Africa)</option>
+      <option value="+82">🇰🇷 +82 (South Korea)</option>
+      <option value="+90">🇹🇷 +90 (Turkey)</option>
+      <option value="+31">🇳🇱 +31 (Netherlands)</option>
+      <option value="+46">🇸🇪 +46 (Sweden)</option>
+      <option value="+47">🇳🇴 +47 (Norway)</option>
+      <option value="+45">🇩🇰 +45 (Denmark)</option>
+      <option value="+41">🇨🇭 +41 (Switzerland)</option>
+      <option value="+351">🇵🇹 +351 (Portugal)</option>
+      <option value="+30">🇬🇷 +30 (Greece)</option>
+      <option value="+32">🇧🇪 +32 (Belgium)</option>
+      <option value="+48">🇵🇱 +48 (Poland)</option>
+      <option value="+420">🇨🇿 +420 (Czech Republic)</option>
+      <option value="+353">🇮🇪 +353 (Ireland)</option>
+      <option value="+380">🇺🇦 +380 (Ukraine)</option>
+      <option value="+94">🇱🇰 +94 (Sri Lanka)</option>
+      <option value="+254">🇰🇪 +254 (Kenya)</option>
+      <option value="+234">🇳🇬 +234 (Nigeria)</option>
+      <option value="+58">🇻🇪 +58 (Venezuela)</option>
+      <option value="+972">🇮🇱 +972 (Israel)</option>
+      <option value="+20">🇪🇬 +20 (Egypt)</option>
+      <option value="+852">🇭🇰 +852 (Hong Kong)</option>
+      <option value="+886">🇹🇼 +886 (Taiwan)</option>
+      <option value="+36">🇭🇺 +36 (Hungary)</option>
+      <option value="+372">🇪🇪 +372 (Estonia)</option>
+      <option value="+420">🇨🇿 +420 (Czech Republic)</option>
+      <option value="+62">🇮🇩 +62 (Indonesia)</option>
+      <option value="+595">🇵🇾 +595 (Paraguay)</option>
+      <option value="+51">🇵🇪 +51 (Peru)</option>
+      <option value="+56">🇨🇱 +56 (Chile)</option>
+      <option value="+593">🇪🇨 +593 (Ecuador)</option>
+      <option value="+598">🇺🇾 +598 (Uruguay)</option>
+      <option value="+57">🇨🇴 +57 (Colombia)</option>
+      <option value="+502">🇬🇹 +502 (Guatemala)</option>
+      <option value="+505">🇳🇮 +505 (Nicaragua)</option>
+      <option value="+54">🇦🇷 +54 (Argentina)</option>
+      <option value="+62">🇮🇩 +62 (Indonesia)</option>
+      <option value="+95">🇲🇲 +95 (Myanmar)</option>
+      <option value="+94">🇱🇰 +94 (Sri Lanka)</option>
+      <option value="+998">🇺🇿 +998 (Uzbekistan)</option>
+      <option value="+66">🇹🇭 +66 (Thailand)</option>
+      <option value="+84">🇻🇳 +84 (Vietnam)</option>
+      <option value="+60">🇲🇾 +60 (Malaysia)</option>
+      <option value="+62">🇮🇩 +62 (Indonesia)</option>
+    </select>
+    <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="xxxxxxxxxx" required />
+  </div>
+</div>
+
 
       <!-- Email -->
       <div class="col-md-6">
@@ -1002,7 +1095,7 @@ pricing-badge {
         <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" required />
       </div>
 
-      <!-- Company (optional) -->
+      <!-- Company -->
       <div class="col-md-6">
         <label class="form-label">Company</label>
         <input type="text" id="company" name="company" class="form-control" placeholder="Company name" />
@@ -1022,6 +1115,7 @@ pricing-badge {
     </div>
   </form>
 </div>
+
 
       </div>
     </div>
