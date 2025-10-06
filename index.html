@@ -1354,11 +1354,13 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
     gsap.from('.hero-sub', { y: 16, opacity: 0, duration: 0.8, delay:.2 });
     gsap.to('.orb', { y: -18, x: -12, duration: 6, yoyo: true, repeat: -1, ease: 'sine.inOut' });
 
-    document.getElementById("contactForm").addEventListener("submit", async function(e) {
+   document.getElementById("contactForm").addEventListener("submit", async function(e) {
   e.preventDefault();
 
   const data = {
     name: document.getElementById("name").value,
+    countryCode: document.getElementById("countryCode").value,
+    mobile: document.getElementById("mobile").value,
     email: document.getElementById("email").value,
     company: document.getElementById("company").value,
     project: document.getElementById("project").value
@@ -1387,6 +1389,7 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
     alert("Error submitting form.");
   }
 });
+
 
 
   </script>
